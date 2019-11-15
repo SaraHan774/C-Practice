@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 #define ARR_MAX_SIZE 50
-//TODO : Fix This Stack !!! 
+
 class Stack{
     int * arr;
     int top;
@@ -14,13 +14,13 @@ public:
         this -> top = -1;
     }
     int operator>>(int& op);
-    Stack operator<<(int op);
+    Stack& operator<<(int op);
     bool operator!();
     int * getArr(){ return arr; }
     int getTop(){ return top; }
 };
 
-Stack Stack::operator<<(int op) {
+Stack& Stack::operator<<(int op) {
     if(top >= ARR_MAX_SIZE - 1){
         perror("Stack Overflow");
         exit(EXIT_FAILURE);
@@ -31,7 +31,7 @@ Stack Stack::operator<<(int op) {
 
 int Stack::operator>>(int& op) {
     if(getTop() != -1){
-        op = (this -> getArr())[--top];
+        op = (this -> getArr())[top--];
         return op;
     }
     return -1;
@@ -46,12 +46,7 @@ int main(){
     Stack stack = Stack();
     stack << 3 << 5 << 10 ; //차례대로 push 한다
 
-    int * arr = stack.getArr();
-    cout << "top : " << stack.getTop() << endl;
-
-    for(int i = 0 ; i <= stack.getTop(); i++){
-
-    }
+    cout << "top index : " << stack.getTop() << endl;
 
     while(true){
         if(!stack){ //if the stack is empty
