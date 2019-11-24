@@ -6,3 +6,6 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(cplus_hyu virtual.cpp)
 add_executable(assignment4 assignment4_2.cpp)
 add_executable(examples alg7_11.cpp)
+
+add_executable(exceptions exceptions.cpp)
+add_executable(dbms prime_mt.cpp)
