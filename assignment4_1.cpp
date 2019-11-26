@@ -15,18 +15,46 @@ private:
 protected:
     int z;
 
+    int getRef(){
+        return objARef -> x;
+    }
+
 };
 
 class B : public A{
 public:
     A objA;
+
+    int getX(){
+        return x;
+    }
+
+    int getZ(){
+        return z;
+    }
+
+    int getRefB(){
+        return objARef -> x;
+    }
 };
 
 class C{
 public:
     A objA;
     A *objARef;
-    B ojbB;
+    B objB;
+
+//    int getX(){
+//        return x;
+//    }
+
+    int getRefC(){
+        return objARef -> x;
+    }
+
+    int getObjBX(){
+        return objB.x;
+    }
 };
 
 int main(){
