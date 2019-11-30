@@ -11,3 +11,5 @@ add_executable(exceptions exceptions.cpp)
 add_executable(dbms prime_mt.cpp)
 
 add_executable(Lecture1126 Lecture1126.cpp Lecture1126_2.cpp Lecture1126_3.cpp)
+
+add_executable(assignment5 assignment5.cpp)
