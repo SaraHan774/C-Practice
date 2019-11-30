@@ -97,7 +97,8 @@ F
 * d) Change your code so that it works with objects created on the heap by using the new operator. Discuss the positive and negative aspects of such an object-reference based approach for exception handling.
     * Created `MyObject` class & initialized with `new` keyword. 
     * This approach might cause "Zombie object" problem due to the fact that `delete` keyword is unreachable after a `throw` statement.   
-
+    * However this method is useful for dynamically creating an object and removing them from memory after done using it, if `delete` is guaranteed.
+      
 ```
 //
 // Created by sarah on 11/30/2019.
