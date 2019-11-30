@@ -30,6 +30,17 @@ public:
 
 };
 
+class MyObject{
+public:
+    MyObject(){
+        cout << "MyObject Constructor Running ... " << endl;
+    }
+
+    ~MyObject(){
+        cout << "MyObject Destructor Running ... " << endl;
+    }
+};
+
 void fun() {
     try {
         std::cout << "FA\n";
@@ -48,8 +59,17 @@ void fun() {
 
 int main() {
 
-    InvalidAttributeException *exception
-    = new InvalidAttributeException(0, "function", "msg");
+    //Creating MyObject
+    try{
+        MyObject * object = new MyObject();
+        throw 50;
+
+        //Unreachable code 'delete ~ '
+        delete object;
+    }catch (int myException){
+        cout << "Catch : " << myException << endl;
+    }
+
 
     try {
         std::cout << "A\n";
@@ -65,10 +85,10 @@ int main() {
     catch (InvalidAttributeException &e){
         e.print();
     }
-
     catch (...) {
         std::cout << "E\n";
     }
+
     std::cout << "F\n";
 
     return 0;
