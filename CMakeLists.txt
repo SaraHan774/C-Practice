@@ -13,3 +13,8 @@ add_executable(dbms prime_mt.cpp)
 add_executable(Lecture1126 Lecture1126.cpp Lecture1126_2.cpp Lecture1126_3.cpp)
 
 add_executable(assignment5 assignment5.cpp)
+
+add_executable(main main.cpp Account.cpp Account.h Circle.cpp Circle.h Date.cpp Date.h Histogram.cpp Histogram.h Random.cpp Random.h Rectangle.cpp Tower.cpp Tower.h)
+add_executable(solution3 solution3.cpp)
+add_executable(solution4 solution4.cpp)
+add_executable(solution5 solution5.cpp)

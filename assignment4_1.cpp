@@ -30,6 +30,7 @@ public:
     }
 
     int getZ(){
+        //objA.z 는 안됨 !
         return z;
     }
 
@@ -54,6 +55,10 @@ public:
 
     int getObjBX(){
         return objB.x;
+    }
+
+    int getProtected(){
+        return objB.z;
     }
 };
 
