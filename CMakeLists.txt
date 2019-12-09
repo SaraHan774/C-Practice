@@ -18,3 +18,13 @@ add_executable(main main.cpp Account.cpp Account.h Circle.cpp Circle.h Date.cpp 
 add_executable(solution3 solution3.cpp)
 add_executable(solution4 solution4.cpp)
 add_executable(solution5 solution5.cpp)
+
+add_executable(callbyvalue callbyvalue.cpp)
+
+add_executable(final_main final_main.cpp)
+add_executable(protected protected.cpp)
+add_executable(dynamicalloc dynamicalloc.cpp)
+
+add_executable(practicals_ practicals/MainPrac.cpp)
+
+add_executable(overloading overloading.cpp)
